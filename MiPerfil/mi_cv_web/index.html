@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hoja de Vida – Carlos Guanoluisa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <div class="perfil">
+        <img
+          src="assets/img/foto.jpeg"
+          alt="Foto de perfil de Carlos Andres Guanoluisa"
+          class="fotoPerfil"
+        />
+        <div>
+          <h1 class="nombre">Carlos Andres Guanoluisa Torres</h1>
+          <p>
+            Estudiante de Ing. en Tecnologías de la Información (6to semestre)
+          </p>
+        </div>
+      </div>
+      <!-- area de contacto -->
+      <aside class="contacto" aria-label="Datos de contacto">
+        <p><strong>Teléfono:</strong> 0987073061</p>
+        <p><strong>Correo:</strong> caguanoluisa@espe.edu.ec</p>
+        <p><strong>Dirección:</strong> Quito - Quitumbe</p>
+        <p>
+          <strong>LinkedIn:</strong>
+          <a
+            href="https://www.linkedin.com/in/andresguanoluisa"
+            target="_blank"
+            rel="noopener"
+            >/andresguanoluisa</a
+          >
+        </p>
+        <p>
+          <strong>GitHub:</strong>
+          <a
+            href="https://github.com/CarlosAndresGT"
+            target="_blank"
+            rel="noopener"
+            >/CarlosAndresGT</a
+          >
+        </p>
+      </aside>
+    </header>
+
+    <main id="contenido" role="main">
+      <!-- seccion de perfil -->
+      <section class="tarjeta b-perfil" aria-labelledby="t-perfil">
+        <h2>Perfil profesional</h2>
+        <p>
+          Soy una persona a la que le gusta capacitarse y emprender nuevos
+          retos, me adapto con facilidad a equipos de trabajo. Actualmente curso
+          el sexto semestre de Ingeniería en Tecnologías de la Información y
+          busco aplicar y fortalecer mis habilidades en un entorno profesional.
+        </p>
+      </section>
+      <!-- seccion de experiencia -->
+      <section class="tarjeta b-exp" aria-labelledby="t-exp">
+        <h2>
+          Experiencia laboral
+          <!-- boton para ocultar -->
+          <button
+            class="toggle"
+            aria-expanded="false"
+            aria-controls="lista-exp"
+          >
+            Mostrar/Ocultar
+          </button>
+        </h2>
+        <ul class="lista">
+          <li>
+            <strong>Ayudante de Mecánica</strong> — Patio de Cooperativa Loja
+            (ago 2021 – mar 2024). Mantenimiento y reparación de sistemas
+            eléctrico, neumático y mecánico de buses Scania.
+          </li>
+          <li>
+            <strong>Docente</strong> — Centro de Estudios “GORKI” (jun 2019 –
+            presente). Tutorías y materiales didácticos en electrónica,
+            electricidad, matemáticas, física y estadística.
+          </li>
+        </ul>
+      </section>
+      <!-- seccion de educacion -->
+      <section class="tarjeta b-edu" aria-labelledby="t-edu">
+        <h2>
+          Educación
+          <button
+            class="toggle"
+            aria-expanded="false"
+            aria-controls="lista-edu"
+          >
+            Mostrar/Ocultar
+          </button>
+        </h2>
+        <ul class="lista">
+          <li>
+            <strong>Universidad de las Fuerzas Armadas – ESPE</strong> · Ing. en
+            TI (6to semestre)
+          </li>
+          <li>
+            <strong>Escuela Politécnica Nacional – EPN</strong> · Tecnólogo
+            Superior Electromecánico (2021)
+          </li>
+          <li>
+            <strong>Academia Aeronáutica “Mayor Pedro Traversari”</strong> ·
+            Bachiller Técnico Industrial (2014)
+          </li>
+        </ul>
+      </section>
+      <!-- seccion de habilidades  -->
+      <section class="tarjeta b-hab" aria-labelledby="t-hab">
+        <h2>Habilidades</h2>
+        <div class="habilidades">
+          <div>
+            <h3>Habilidades técnicas</h3>
+            <ul class="chips">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS (Flexbox / Grid)</li>
+              <li class="chip">JavaScript (DOM)</li>
+              <li class="chip">Git / GitHub</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Habilidades blandas</h3>
+            <ul class="chips">
+              <li class="chip">Comunicación</li>
+              <li class="chip">Trabajo en equipo</li>
+              <li class="chip">Adaptabilidad</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Mis enlaces de interes -->
+      <section class="tarjeta b-enlaces" aria-labelledby="t-links">
+        <h2 id="t-links">Enlaces</h2>
+        <nav aria-label="Enlaces externos">
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/andresguanoluisa"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/CarlosAndresGT"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </nav>
+      </section>
+    </main>
+    <!-- para el pie, solamentre estará el boton para cambiar a modo Oscuro -->
+    <footer class="pie" role="contentinfo">
+      <button id="themeToggle" class="btn" aria-pressed="false">
+        Modo oscuro
+      </button>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

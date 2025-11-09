@@ -1,0 +1,192 @@
+:root{
+  --color-primario:#F4E9CD;
+  --bg-primario:#135981;      
+  --bg-secundario:#0a302b;    
+  --texto:#f2ebcf;
+  --tarjeta:#9acec9;         
+  --chip-borde:#e5e7eb;
+  --text-color-t:rgb(44, 42, 42);
+  --boton-myo: #1c3b47;
+  --texto-myo:#ffff;
+
+}
+
+body{
+  margin:0;
+  background:var(--bg-primario);
+  color:var(--texto);
+  font-family:system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+  line-height:1.5;
+}
+
+
+.encabezado{
+  display:flex;
+  justify-content:space-between; 
+  align-items:center;
+  padding:20px;
+  background:var(--bg-secundario);
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.perfil{
+  display:flex; 
+  align-items:center; 
+  gap:16px
+}
+
+.fotoPerfil{
+  width:120px; height:120px; border-radius:50%; object-fit:cover;
+  border:3px solid var(--color-primario);
+}
+
+.nombre{
+  margin:0
+}
+
+.rol{
+  margin:.25rem 0 0; 
+  opacity:.9
+}
+
+.contacto{
+  background:var(--bg-primario);
+  padding:10px 14px;
+  border-radius:10px;
+  min-width:260px;
+  text-align:left;
+}
+
+/* dar una variable para poder controlar la forma en la que se muestra el 
+contenido en pantalla dependiendo de las clases en el HTML */
+.b-perfil{ grid-area: perfil; }
+.b-exp   { grid-area: exp; }
+.b-hab   { grid-area: hab; }
+.b-edu   { grid-area: edu; }
+.b-enlaces { grid-area: enlaces; }
+
+
+#contenido{
+  max-width:980px;
+  margin:24px auto;
+  padding:0 16px;
+  display:grid;
+  gap:16px;
+
+
+  grid-template-columns: 1fr 1fr;
+/* Posicion de las secciones en la que queremos que se muestre en la pantalla
+se debe tener en cuenta que es necesario completar en este caso que sea 2 columnas */
+  grid-template-areas:
+    "perfil  perfil"
+    "exp    hab"
+    "edu    enlaces";
+}
+
+
+.tarjeta{
+  background:var(--tarjeta);
+  color:var(--text-color-t);
+  border-radius:12px;
+  padding:16px;
+  box-shadow:0 1px 2px rgba(0,0,0,.08);
+}
+.lista{
+  margin:.5rem 0 0 1rem
+}
+
+.habilidades{
+  display:grid; 
+  gap:12px
+}
+
+.chips{
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:8px;
+  color:rgb(44, 42, 42)
+}
+
+.chip{
+  border:1px solid var(--chip-borde);
+  padding:.35rem .6rem; 
+  border-radius:999px; 
+  background:#fff;
+}
+.chip:hover{
+  border: 2px solid #0ea5e9;
+}
+
+
+.btn{
+  display:inline-block;
+  padding:.5rem .8rem;
+  background:var(--bg-primario); color:#fff;
+  border:0; border-radius:8px; text-decoration:none; cursor:pointer;
+}
+
+.btn:hover{
+  border: 2px solid #0ea5e9;
+}
+
+.toggle{
+  float:right;
+  padding:.35rem .6rem;
+  background:var(--boton-myo); 
+  color:var(--texto-myo); 
+  border:2px; 
+  border-radius:8px; 
+  cursor:pointer;
+  
+}
+.toggle:hover{
+  border: 2px solid #0ea5e9;
+  
+}
+
+.pie{
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; gap:1rem;
+  background:var(--bg-secundario); 
+  padding:14px 16px
+}
+
+
+
+/* Paleta de colores para el modo oscuro, las etiquetas deben ser las mismas que 
+la paleta de colores principal */
+body.dark{
+  --color-primario:#0433b6;
+  --bg-primario:#3a3e3f;      
+  --bg-secundario:#195050;    
+  --texto:#ffffff;
+  --tarjeta:#065852;         
+  --chip-borde:#5770a3;
+  --text-color-t:white;
+  --boton-myo: #f4fcff;
+   --texto-myo:#534b4b;
+}
+/* para que los enlaces no se marquen de purpura y se pierdan de el color de la paleta de colores */
+a {
+    color: #e9ecee; 
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #bdeeb6; 
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: #e1e5e7; 
+  }
+
+  a:active {
+    color: #ff5722; 
+  }
