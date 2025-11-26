@@ -137,7 +137,7 @@ class ModalInfo extends HTMLElement {
             .querySelector("#cerrar")
             .addEventListener("click", () => this.cerrar());
 
-        // Botón más información → manda el planeta completo
+        // Botón más información
         this.shadowRoot
             .querySelector("#masInfo")
             .addEventListener("click", () => {
