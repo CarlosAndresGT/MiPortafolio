@@ -40,11 +40,11 @@ class MasInfo extends HTMLElement{
                 :host {
                     position: absolute;
                     top: 50%;
-                    left: 30%;     
+                    left: 33%;     
                     transform: translate(-50%, -50%);
                     
-                    width: min(420px, 45vw);
-                    height: min(70vh, 520px);
+                    width: min(620px, 45vw);
+                    height: min(70vh, 720px);
                     box-sizing: border-box;
 
                     background: rgba(0, 0, 0, 0.85);
@@ -67,8 +67,8 @@ class MasInfo extends HTMLElement{
                 }
 
                 .imagen-planeta {
-                    width: 110px;
-                    height: 110px;
+                    width: 130px;
+                    height: 130px;
                     border-radius: 50%;
                     overflow: hidden;
                     flex-shrink: 0;
